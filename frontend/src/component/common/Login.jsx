@@ -1,0 +1,66 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Joi from "joi-browser";
+import { validateAll, validateField } from "./Validate";
+import Input from "./Input";
+
+function Login() {
+  const [inputs, setInputs] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const navigate = useNavigate();
+
+  const schema = {
+    email: Joi.string().email().required().label("Email"),
+    password: Joi.string().min(3).required().label("Password"),
+  };
+
+  const handleChange = ({ target }) => {
+    const { name, value } = target;
+    setInputs({ ...inputs, [name]: value });
+    const newSchema = { [target.name]: schema[target.name] };
+    const message = validateField(target, newSchema);
+    if (!message) setErrors({ ...errors, [target.name]: "" });
+    setErrors({
+      ...errors,
+      [target.name]: message,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = validateAll(inputs, schema);
+    if (newErrors.length === 0) navigate("/");
+    setErrors(newErrors);
+  };
+
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        <Input
+          label="Email"
+          name="email"
+          value={inputs.email}
+          onChange={handleChange}
+          error={errors.email}
+        />
+
+        <Input
+          label="Password"
+          name="password"
+          value={inputs.password}
+          onChange={handleChange}
+          error={errors.password}
+        />
+
+        <button className="btn btn-primary">Log in</button>
+      </form>
+    </>
+  );
+}
+
+export default Login;
