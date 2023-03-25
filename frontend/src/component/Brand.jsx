@@ -6,6 +6,7 @@ import paginateRecords from "../utils/paginateRecords";
 import { getBrands } from "./../services/fakeBrands";
 import { getEquipment } from "./../services/fakeEquipment";
 import EquipmentTable from "./EquipmentTable";
+import SearchBox from "./common/SearchBox";
 
 const Brand = () => {
   const newbrands = [{ name: "All Brands" }, ...getBrands()];
@@ -13,7 +14,14 @@ const Brand = () => {
   const [brands, setBrands] = useState(newbrands);
   const [equipment, setEquipment] = useState(getEquipment());
   const [selected, setSelected] = useState("All Brands");
+  const [searchQuery, setSearchQuery] = useState();
   const pageSize = 8;
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    setSelected(null);
+    setCurrentPage(1);
+  };
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -21,14 +29,17 @@ const Brand = () => {
 
   const handleItemSelect = (selected) => {
     setSelected(selected);
+    setSearchQuery("");
     setCurrentPage(1);
   };
 
-  const filtered =
-    selected && selected !== "All Brands"
-      ? equipment.filter((e) => e.brand === selected)
-      : equipment;
-  console.log(filtered);
+  let filtered = equipment;
+  if (searchQuery)
+    filtered = equipment.filter((e) =>
+      e.name.toLowerCase().startsWith(searchQuery.toLowerCase())
+    );
+  else if (selected && selected !== "All Brands")
+    filtered = equipment.filter((e) => e.brand === selected);
   const newEquipment = paginateRecords(filtered, currentPage, pageSize);
 
   return (
@@ -42,6 +53,7 @@ const Brand = () => {
           />
         </div>
         <div className="col">
+          <SearchBox value={searchQuery} onChange={handleSearch} />
           <EquipmentTable equipment={newEquipment} />
           <Paginate
             itemsCount={filtered.length}
