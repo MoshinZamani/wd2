@@ -6,7 +6,7 @@ import Signup from "./component/Signup";
 import NavBar from "./component/NavBar";
 import Login from "./component/common/Login";
 import Help from "./component/Help";
-
+import BrandProduct from "./component/BrandProduct";
 function App() {
   return (
     <div className="container">
@@ -15,7 +15,9 @@ function App() {
           <Route index element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route element={<NavBar />}>
-            <Route path="brand" element={<Brand />} />
+            <Route path="brand" element={<Brand />}>
+              <Route path=":brand" element={<Brand />} />
+            </Route>
             <Route path="type" element={<Type />} />
             <Route path="signup" element={<Signup />} />
             <Route path="login" element={<Login />} />
