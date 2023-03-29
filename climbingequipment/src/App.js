@@ -25,7 +25,6 @@ function App() {
             <Route path="logout" element={<Login />} />
             <Route path="help" element={<Help />} />
           </Route>
-          <Route path="firebasedb" element={<Firebasedb />} />
         </Route>
       </Routes>
     </div>
