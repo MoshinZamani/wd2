@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Joi from "joi-browser";
 import { validateAll, validateField } from "./Validate";
+import { auth } from "../../config/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import Input from "./Input";
 
 function Login() {
@@ -16,7 +18,7 @@ function Login() {
 
   const schema = {
     email: Joi.string().email().required().label("Email"),
-    password: Joi.string().min(3).required().label("Password"),
+    password: Joi.string().min(6).required().label("Password"),
   };
 
   const handleChange = ({ target }) => {
@@ -31,10 +33,21 @@ function Login() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateAll(inputs, schema);
-    if (newErrors.length === 0) navigate("/");
+    if (newErrors.length === 0) {
+      try {
+        await createUserWithEmailAndPassword(
+          auth,
+          inputs.email,
+          inputs.password
+        );
+        navigate("/brand");
+      } catch (err) {
+        console.error(err);
+      }
+    }
     setErrors(newErrors);
   };
 

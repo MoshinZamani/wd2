@@ -7,14 +7,37 @@ import { getBrands } from "./../services/fakeBrands";
 import { getEquipment } from "./../services/fakeEquipment";
 import EquipmentTable from "./EquipmentTable";
 import SearchBox from "./common/SearchBox";
+import { db } from "../config/firebase";
+import { getDocs, collection } from "firebase/firestore";
 
 const Brand = () => {
-  const newbrands = [{ name: "All Brands" }, ...getBrands()];
+  const [brands, setBrands] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [brands, setBrands] = useState(newbrands);
   const [equipment, setEquipment] = useState(getEquipment());
   const [selected, setSelected] = useState("All Brands");
   const [searchQuery, setSearchQuery] = useState();
+
+  const brandsCollectionRef = collection(db, "brands");
+  const getBrandsList = async () => {
+    try {
+      const data = await getDocs(brandsCollectionRef);
+      const newbrands = data.docs.map((d) => ({
+        ...d.data(),
+        id: d.name,
+      }));
+      setBrands([
+        { name: "All Brands", _id: "dfsdfkajsdklfjakl454" },
+        ...newbrands,
+      ]);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    getBrandsList();
+  }, []);
+
   const pageSize = 8;
 
   const handleSearch = (query) => {
@@ -45,7 +68,7 @@ const Brand = () => {
   return (
     <>
       <div className="row">
-        <div className="col-3">
+        <div className="col-3 mt-3">
           <SideBar
             brands={brands}
             selectedItem={selected}

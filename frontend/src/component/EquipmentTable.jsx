@@ -1,6 +1,6 @@
 const EquipmentTable = ({ equipment }) => {
   return (
-    <table className="table">
+    <table className="table rounded" style={{ backgroundColor: "white" }}>
       <thead>
         <tr>
           <th>Name</th>

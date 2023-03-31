@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [value, setValue] = useState("Learn the best better");
+  const [messageClasses, setMessageClasses] = useState("rounded col-3");
 
   const handleMouseEnter = (tag) => {
     const values = [
@@ -15,7 +16,7 @@ function Home() {
       },
       {
         tag: "login",
-        value: "unlock the climbing world",
+        value: "Unlock the climbing world",
       },
     ];
     setValue(
@@ -23,20 +24,28 @@ function Home() {
         if (n.tag === tag) return n.value;
       })
     );
+    if (tag === "signup") {
+      setMessageClasses("rounded col-5");
+    }
   };
 
   const handleMouseLeave = () => {
     setValue("Learn the best better");
+    setMessageClasses("rounded col-3");
   };
 
   return (
     <>
-      <div className="row">
-        <div className="col-6">
-          <p>{value}</p>
+      <div
+        className="row justify-content-center align-items-center"
+        style={{ height: "200px" }}
+      ></div>
+      <div className="row justify-content-center align-items-center">
+        <div className={messageClasses}>
+          <p style={{ color: "white" }}>{value}</p>
         </div>
       </div>
-      <div className="row">
+      <div className="row justify-content-center align-items-center">
         <div className="col-3">
           <Link
             to="type"
@@ -49,10 +58,16 @@ function Home() {
             Type
           </Link>
         </div>
-        <div className="col-3">
+        <div
+          className="col-3"
+          style={{
+            backgroundImage: `url("https://https://www.climbingshoereview.com/wp-content/uploads/2021/04/Best-Climbing-Shoe-Brands.jpg")`,
+          }}
+        >
           <Link
             to="brand"
-            className="btn btn-primary btn-lg active btn-block mb-2"
+            style={{ backgroundImage: `url("../../logo/brands.jpg")` }}
+            className="btn btnprimarybackground btn-lg active btn-block mb-2"
             onMouseEnter={() => handleMouseEnter("brand")}
             onMouseLeave={handleMouseLeave}
             role="button"
@@ -62,7 +77,7 @@ function Home() {
           </Link>
         </div>
       </div>
-      <div className="row">
+      <div className="row justify-content-center align-items-center">
         <div className="col-6">
           <Link
             to="login"
@@ -76,7 +91,7 @@ function Home() {
           </Link>
         </div>
       </div>
-      <div className="row">
+      <div className="row justify-content-center align-items-center">
         <div className="col-6">
           <Link
             to="signup"

@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 
 function SideBar({ brands, selectedItem, onItemSelect }) {
-  const [records, setRecords] = useState(brands);
   return (
     <>
       <ul className="list-group">
-        {records.map((r) => (
+        {brands.map((b) => (
           <li
-            onClick={() => onItemSelect(r.name)}
-            key={r.name}
+            onClick={() => onItemSelect(b.name)}
+            key={b._id}
             className={
-              selectedItem === r.name
+              selectedItem === b.name
                 ? "list-group-item active"
                 : "list-group-item"
             }
           >
-            <a>{r.name}</a>
+            <NavLink to={b.Link}>{b.name}</NavLink>
           </li>
         ))}
       </ul>
