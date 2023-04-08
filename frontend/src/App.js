@@ -8,7 +8,7 @@ import Login from "./component/common/Login";
 import Help from "./component/Help";
 import Firebasedb from "./utils/Firebasedb";
 import Logout from "./component/common/Logout";
-
+import "./component/css/App.css";
 function App() {
   return (
     <div className="container">

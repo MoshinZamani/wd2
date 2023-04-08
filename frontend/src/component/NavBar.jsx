@@ -19,7 +19,7 @@ function NavBar() {
   }
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary rounded mt-2">
+      <nav className="navbar navbar-expand-lg rounded mt-2">
         <div className="container-fluid">
           <Link to="/">
             <p className="logo"></p>
