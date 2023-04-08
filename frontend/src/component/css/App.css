@@ -1,3 +1,13 @@
 .navbar {
-  color: black;
+  background-color: rgb(248 249 250 / 0.5) !important;
 }
+
+.navbar a {
+  position: relative;
+  opacity: 1;
+  color: rgb(78, 151, 72);
+}
+/* 
+.table {
+  background-color: rgb(248 249 250 / 0.5) !important;
+} */
