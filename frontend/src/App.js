@@ -6,8 +6,10 @@ import Signup from "./component/Signup";
 import NavBar from "./component/NavBar";
 import Login from "./component/common/Login";
 import Help from "./component/Help";
-import BrandProduct from "./component/BrandProduct";
 import Firebasedb from "./utils/Firebasedb";
+import Logout from "./component/common/Logout";
+import "./component/css/App.css";
+
 function App() {
   return (
     <div className="container">
@@ -22,7 +24,7 @@ function App() {
             <Route path="type" element={<Type />} />
             <Route path="signup" element={<Signup />} />
             <Route path="login" element={<Login />} />
-            <Route path="logout" element={<Login />} />
+            <Route path="logout" element={<Logout />} />
             <Route path="help" element={<Help />} />
           </Route>
           <Route path="firebasedb" element={<Firebasedb />} />

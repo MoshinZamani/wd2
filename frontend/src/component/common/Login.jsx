@@ -4,6 +4,8 @@ import Joi from "joi-browser";
 import { validateAll, validateField } from "./Validate";
 import { auth } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { OUT, IN } from "../../feature/log/logSlice";
+import { useSelector, useDispatch } from "react-redux";
 import Input from "./Input";
 
 function Login() {
@@ -11,6 +13,7 @@ function Login() {
     email: "",
     password: "",
   });
+  const dispatch = useDispatch();
 
   const [errors, setErrors] = useState({});
 
@@ -43,6 +46,7 @@ function Login() {
           inputs.email,
           inputs.password
         );
+        dispatch(IN());
         navigate("/brand");
       } catch (err) {
         console.error(err);

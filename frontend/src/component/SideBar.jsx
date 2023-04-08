@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 function SideBar({ brands, selectedItem, onItemSelect }) {
   return (
@@ -15,7 +15,7 @@ function SideBar({ brands, selectedItem, onItemSelect }) {
                 : "list-group-item"
             }
           >
-            <NavLink to={b.Link}>{b.name}</NavLink>
+            <Link to={b.Link}>{b.name}</Link>
           </li>
         ))}
       </ul>

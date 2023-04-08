@@ -1,16 +1,13 @@
 import { Outlet, Link } from "react-router-dom";
-import { auth } from "../config/firebase";
+import { useSelector } from "react-redux";
 
 function NavBar() {
-  console.log(auth.currentUser);
+  const login = useSelector((state) => state.log.value);
 
-  if (auth.currentUser) {
+  if (login) {
     return (
       <>
-        <nav
-          className="navbar navbar-expand-lg bg-body-tertiary rounded mt-2"
-          style={{ backgroundColor: "white" }}
-        >
+        <nav className="navbar navbar-expand-lg rounded mt-2">
           <div className="container-fluid">
             <Link to="/">
               <p className="logo"></p>
