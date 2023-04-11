@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const [value, setValue] = useState("Learn the best better");
-  const [messageClasses, setMessageClasses] = useState("rounded col-3");
+  const [value, setValue] = useState("Learn Deeper Climb Higher");
+  const [messageClasses, setMessageClasses] = useState("rounded col-12");
 
   const handleMouseEnter = (tag) => {
     const values = [
-      { tag: "main", value: "Learn the best better" },
+      { tag: "main", value: "Learn Deeper Climb Higher" },
       { tag: "type", value: "Find everything by type" },
       { tag: "brand", value: "Organised on brands" },
       {
         tag: "signup",
-        value: "Sign up and talk to one of our experts to learn more",
+        value: "Sign up for expertise",
       },
       {
         tag: "login",
-        value: "Unlock the climbing world",
+        value: "Unlock climbing world",
       },
     ];
     setValue(
@@ -25,18 +25,80 @@ function Home() {
       })
     );
     if (tag === "signup") {
-      setMessageClasses("rounded col-5");
+      setMessageClasses("rounded col-12");
+    } else if (tag === "login") {
+      setMessageClasses("rounded col-12");
     }
   };
 
   const handleMouseLeave = () => {
-    setValue("Learn the best better");
-    setMessageClasses("rounded col-3");
+    setValue("Learn Deeper Climb Higher");
+    setMessageClasses("rounded col-12");
   };
 
   return (
     <>
-      <div
+      <div className="grid-home">
+        <div className="firstrow">
+          <h2 className={messageClasses}>{value}</h2>
+        </div>
+        <div className="secondrow">
+          <div className="type col-6">
+            <Link
+              to="type"
+              className=""
+              onMouseEnter={() => handleMouseEnter("type")}
+              onMouseLeave={handleMouseLeave}
+              role="button"
+              aria-pressed="true"
+            >
+              <h1>Type</h1>
+            </Link>
+          </div>
+          <div className="brand col-6">
+            <Link
+              to="brand"
+              className=""
+              onMouseEnter={() => handleMouseEnter("brand")}
+              onMouseLeave={handleMouseLeave}
+              role="button"
+              aria-pressed="true"
+            >
+              <h1>Brand</h1>
+            </Link>
+          </div>
+        </div>
+        <div className="thirdrow">
+          <div className="">
+            <Link
+              to="login"
+              className="login"
+              onMouseEnter={() => handleMouseEnter("login")}
+              onMouseLeave={handleMouseLeave}
+              role="button"
+              aria-pressed="true"
+            >
+              Log In
+            </Link>
+          </div>
+          <div>
+            <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          </div>
+          <div className="">
+            <Link
+              to="signup"
+              className="signup"
+              onMouseEnter={() => handleMouseEnter("signup")}
+              onMouseLeave={handleMouseLeave}
+              role="button"
+              aria-pressed="true"
+            >
+              Sign Up
+            </Link>
+          </div>
+        </div>
+      </div>
+      {/* <div
         className="row justify-content-center align-items-center"
         style={{ height: "200px" }}
       ></div>
@@ -49,7 +111,7 @@ function Home() {
         <div className="col-3">
           <Link
             to="type"
-            className="btn btn-primary btn-lg active btn-block mb-2"
+            className="btn btn-lg btn-block mb-2 btn-home"
             onMouseEnter={() => handleMouseEnter("type")}
             onMouseLeave={handleMouseLeave}
             role="button"
@@ -58,16 +120,11 @@ function Home() {
             Type
           </Link>
         </div>
-        <div
-          className="col-3"
-          style={{
-            backgroundImage: `url("https://https://www.climbingshoereview.com/wp-content/uploads/2021/04/Best-Climbing-Shoe-Brands.jpg")`,
-          }}
-        >
+        <div className="col-3">
           <Link
             to="brand"
             style={{ backgroundImage: `url("../../logo/brands.jpg")` }}
-            className="btn btnprimarybackground btn-lg active btn-block mb-2"
+            className="btn btn-primary-background btn-lg btn-block mb-2 btn-home"
             onMouseEnter={() => handleMouseEnter("brand")}
             onMouseLeave={handleMouseLeave}
             role="button"
@@ -104,7 +161,7 @@ function Home() {
             Sign Up
           </Link>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

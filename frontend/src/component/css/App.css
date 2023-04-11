@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+
 .navbar {
   background-color: rgba(23, 26, 26, 0.8) !important;
 }
@@ -28,4 +30,48 @@
 
 .pagination a:active {
   background-color: rgba(143, 243, 243, 0.8) !important;
+}
+
+.grid-home {
+  display: grid;
+  width: 50%;
+  grid-template-rows: 2fr 1fr 1fr;
+  color: white;
+  font-family: Montserrat;
+}
+.grid-home a {
+  color: white;
+}
+
+.firstrow,
+.secondrow,
+.thirdrow {
+  display: flex;
+}
+.firstrow {
+  margin-top: 10%;
+  margin-bottom: 30%;
+  font-style: italic;
+}
+
+.firstrow h2 {
+  font-weight: 900;
+}
+
+.secondrow a {
+  font-weight: bolder;
+}
+.secondrow a:hover {
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.thirdrow {
+  margin-top: 20%;
+}
+.thirdrow div a {
+  color: antiquewhite;
+  font-size: 70%;
+  font-weight: 200;
+  display: inline;
 }
