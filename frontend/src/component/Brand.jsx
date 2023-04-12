@@ -77,7 +77,7 @@ const Brand = () => {
         </div>
         <div className="col">
           <SearchBox value={searchQuery} onChange={handleSearch} />
-          <EquipmentTable equipment={newEquipment} />
+          <EquipmentTable equipment={newEquipment} selected={selected} />
           <Paginate
             itemsCount={filtered.length}
             pageSize={pageSize}

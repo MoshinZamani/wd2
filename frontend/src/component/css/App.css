@@ -75,3 +75,7 @@
   font-weight: 200;
   display: inline;
 }
+
+.nodata {
+  color: #ffffff;
+}

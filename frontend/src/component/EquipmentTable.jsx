@@ -1,9 +1,12 @@
-const EquipmentTable = ({ equipment }) => {
+const EquipmentTable = ({ equipment, selected }) => {
+  if (equipment.length === 0)
+    return (
+      <h3 className="nodata">
+        Nothing in the database for {selected}. Please check later.
+      </h3>
+    );
   return (
-    <table
-      className="table rounded table-dark"
-      style={{ backgroundColor: "white" }}
-    >
+    <table className="table rounded table-dark">
       <thead>
         <tr>
           <th>Name</th>
