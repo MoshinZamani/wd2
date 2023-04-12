@@ -1,12 +1,14 @@
+import { ToastContainer, toast } from "react-toastify";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Joi from "joi-browser";
 import { validateAll, validateField } from "./Validate";
 import { auth } from "../../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { OUT, IN } from "../../feature/log/logSlice";
+import { IN } from "../../feature/log/logSlice";
 import { useDispatch } from "react-redux";
 import Input from "./Input";
+import "react-toastify/dist/ReactToastify.css";
 
 function Login() {
   const [inputs, setInputs] = useState({
@@ -46,6 +48,7 @@ function Login() {
         navigate("/brand");
       } catch (err) {
         console.error(err);
+        toast(err.message);
       }
     }
     setErrors(newErrors);
@@ -53,6 +56,7 @@ function Login() {
 
   return (
     <>
+      <ToastContainer />
       <form onSubmit={handleSubmit}>
         <Input
           label="Email"
