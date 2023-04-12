@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./component/Home";
 import Brand from "./component/Brand";
 import Type from "./component/Type";
-import Signup from "./component/Signup";
+import Signup from "./component/common/Signup";
 import NavBar from "./component/NavBar";
 import Login from "./component/common/Login";
 import Help from "./component/Help";

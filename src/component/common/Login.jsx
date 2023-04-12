@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import Joi from "joi-browser";
 import { validateAll, validateField } from "./Validate";
 import { auth } from "../../config/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { OUT, IN } from "../../feature/log/logSlice";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import Input from "./Input";
 
 function Login() {
@@ -41,11 +41,7 @@ function Login() {
     const newErrors = validateAll(inputs, schema);
     if (newErrors.length === 0) {
       try {
-        await createUserWithEmailAndPassword(
-          auth,
-          inputs.email,
-          inputs.password
-        );
+        await signInWithEmailAndPassword(auth, inputs.email, inputs.password);
         dispatch(IN());
         navigate("/brand");
       } catch (err) {

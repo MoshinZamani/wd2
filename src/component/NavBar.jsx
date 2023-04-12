@@ -11,11 +11,17 @@ function NavBar() {
         Log Out
       </Link>
     );
+    var signUpFlag = "";
     var welcomeMsg = `Welcome ${auth.currentUser.email}`;
   } else {
     var logFlag = (
       <Link to="login" className="nav-link">
         Log In
+      </Link>
+    );
+    var signUpFlag = (
+      <Link to="signup" className="nav-link">
+        Sign Up
       </Link>
     );
     var welcomeMsg = "Welcome guest";
@@ -55,11 +61,7 @@ function NavBar() {
                   Brand
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link to="signup" className="nav-link">
-                  Sign Up
-                </Link>
-              </li>
+              <li className="nav-item">{signUpFlag}</li>
               <li className="nav-item">{logFlag}</li>
             </ul>
           </div>
