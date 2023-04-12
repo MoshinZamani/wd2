@@ -4,12 +4,12 @@
   background-color: rgba(23, 26, 26, 0.8) !important;
 }
 
-.navbar a {
+/* .navbar a {
   position: relative;
   opacity: 1;
   color: rgb(242, 247, 242);
   font-weight: bold;
-}
+} */
 
 .table {
   background-color: rgba(23, 26, 26, 0.8) !important;
@@ -70,4 +70,8 @@
 
 .nodata {
   color: #ffffff;
+}
+
+.welcomemsg {
+  color: white;
 }
