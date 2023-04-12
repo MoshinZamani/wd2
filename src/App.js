@@ -15,7 +15,6 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
-          <Route path="home" element={<Home />} />
           <Route element={<NavBar />}>
             <Route path="brand" element={<Brand />}>
               <Route path=":brand" element={<Brand />} />
@@ -26,6 +25,7 @@ function App() {
             <Route path="logout" element={<Logout />} />
             <Route path="help" element={<Help />} />
           </Route>
+          <Route path="home" element={<Home />} />
           <Route path="firebasedb" element={<Firebasedb />} />
         </Route>
       </Routes>

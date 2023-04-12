@@ -11,7 +11,7 @@ const Logout = () => {
   const navigate = useNavigate();
   useEffect(() => {
     dispatch(OUT());
-    navigate("/home");
+    navigate("/");
   });
 };
 
