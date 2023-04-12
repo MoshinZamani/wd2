@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import SideBar from "./SideBar";
 import Paginate from "./common/Paginate";
 import paginateRecords from "../utils/paginateRecords";
-import { getEquipment } from "./../services/fakeEquipment";
 import EquipmentTable from "./EquipmentTable";
 import SearchBox from "./common/SearchBox";
 import { db } from "../config/firebase";
@@ -84,7 +83,7 @@ const Brand = () => {
       <div className="row">
         <div className="col-3 mt-3 sidebar">
           <SideBar
-            brands={brands}
+            data={brands}
             selectedItem={selected}
             onItemSelect={handleItemSelect}
           />

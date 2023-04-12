@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 
-function SideBar({ brands, selectedItem, onItemSelect }) {
+function SideBar({ data, selectedItem, onItemSelect }) {
   return (
     <>
       <ul className="list-group">
-        {brands.map((b) => (
+        {data.map((d) => (
           <li
-            onClick={() => onItemSelect(b.name)}
-            key={b._id}
+            onClick={() => onItemSelect(d.name)}
+            key={d._id}
             className={
-              selectedItem === b.name
+              selectedItem === d.name
                 ? "list-group-item active"
                 : "list-group-item"
             }
           >
-            <Link to={b.Link}>{b.name}</Link>
+            <Link to={d.Link}>{d.name}</Link>
           </li>
         ))}
       </ul>
