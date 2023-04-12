@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, NavLink, useParams } from "react-router-dom";
 import SideBar from "./SideBar";
 import Paginate from "./common/Paginate";
 import paginateRecords from "../utils/paginateRecords";
-import { getBrands } from "./../services/fakeBrands";
 import { getEquipment } from "./../services/fakeEquipment";
 import EquipmentTable from "./EquipmentTable";
 import SearchBox from "./common/SearchBox";
@@ -13,11 +11,13 @@ import { getDocs, collection } from "firebase/firestore";
 const Brand = () => {
   const [brands, setBrands] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [equipment, setEquipment] = useState(getEquipment());
+  const [equipment, setEquipment] = useState([]);
   const [selected, setSelected] = useState("All Brands");
   const [searchQuery, setSearchQuery] = useState();
 
   const brandsCollectionRef = collection(db, "brands");
+  const equipmentCollectionRef = collection(db, "equipment");
+
   const getBrandsList = async () => {
     try {
       const data = await getDocs(brandsCollectionRef);
@@ -34,8 +34,22 @@ const Brand = () => {
     }
   };
 
+  const getEquipmentList = async () => {
+    try {
+      const data = await getDocs(equipmentCollectionRef);
+      const newEquipment = data.docs.map((d) => ({
+        ...d.data(),
+        id: d.name,
+      }));
+      setEquipment(newEquipment);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
     getBrandsList();
+    getEquipmentList();
   }, []);
 
   const pageSize = 8;
