@@ -57,6 +57,8 @@ function Login() {
   return (
     <>
       <ToastContainer />
+      <br />
+      <br />
       <form onSubmit={handleSubmit}>
         <Input
           label="Email"
@@ -65,7 +67,7 @@ function Login() {
           onChange={handleChange}
           error={errors.email}
         />
-
+        <br />
         <Input
           label="Password"
           name="password"
@@ -73,9 +75,10 @@ function Login() {
           onChange={handleChange}
           error={errors.password}
         />
-
+        <br />
         <button className="btn btn-primary">Log in</button>
       </form>
+      <br />
     </>
   );
 }

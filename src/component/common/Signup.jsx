@@ -56,39 +56,46 @@ function Signup() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Input
-        label="Full Name"
-        name="fullName"
-        value={inputs.fullName}
-        onChange={handleChange}
-        error={errors.fullName}
-      />
-      <Input
-        label="Email"
-        name="email"
-        value={inputs.email}
-        onChange={handleChange}
-        error={errors.email}
-      />
+    <>
+      <br />
+      <br />
+      <form onSubmit={handleSubmit}>
+        <Input
+          label="Full Name"
+          name="fullName"
+          value={inputs.fullName}
+          onChange={handleChange}
+          error={errors.fullName}
+        />
+        <br />
+        <Input
+          label="Email"
+          name="email"
+          value={inputs.email}
+          onChange={handleChange}
+          error={errors.email}
+        />
+        <br />
 
-      <Input
-        label="Password"
-        name="password"
-        value={inputs.password}
-        onChange={handleChange}
-        error={errors.password}
-      />
-
-      <label htmlFor="experience">Years of experience</label>
-      <select name="experience" id="experience" className="form-control">
-        <option value="less">less than one year</option>
-        <option value="between">between one and 3 years</option>
-        <option value="more">more than three years</option>
-      </select>
-
-      <button className="btn btn-primary mt-2">Submit</button>
-    </form>
+        <Input
+          label="Password"
+          name="password"
+          value={inputs.password}
+          onChange={handleChange}
+          error={errors.password}
+        />
+        <br />
+        <label htmlFor="experience">Years of experience</label>
+        <select name="experience" id="experience" className="form-control">
+          <option value="less">less than one year</option>
+          <option value="between">between one and 3 years</option>
+          <option value="more">more than three years</option>
+        </select>
+        <br />
+        <button className="btn btn-primary mt-2">Submit</button>
+      </form>
+      <br />
+    </>
   );
 }
 
