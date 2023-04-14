@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
 
-body {
-  width: 70%;
-  margin: auto;
-}
 .navbar-expand-lg .navbar-collapse {
   display: flex !important;
   flex-direction: row;
@@ -49,6 +45,7 @@ body {
   grid-template-rows: 2fr 1fr 1fr;
   color: white;
   font-family: Montserrat;
+  font-size: 12px !important;
 }
 .grid-home a {
   color: white;
@@ -67,6 +64,7 @@ body {
 
 .firstrow h2 {
   font-weight: 900;
+  width: 100%;
 }
 
 .secondrow a {
@@ -104,8 +102,8 @@ body {
     flex-direction: row !important;
     font-size: 70%;
   }
-  body {
-    width: 70%;
+  .grid-home {
+    font-size: 12px !important;
   }
 }
 /* @media (min-width: 768px) {
@@ -120,5 +118,8 @@ body {
   }
   .list-group {
     flex-direction: column !important;
+  }
+  .grid-home {
+    font-size: 15px !important;
   }
 }

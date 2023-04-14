@@ -8,7 +8,7 @@ function Home() {
   const handleMouseEnter = (tag) => {
     const values = [
       { tag: "main", value: "Learn Deeper Climb Higher" },
-      { tag: "type", value: "Find everything by type" },
+      { tag: "type", value: "Categorized by type" },
       { tag: "brand", value: "Organised on brands" },
       {
         tag: "signup",
