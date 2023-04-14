@@ -6,6 +6,7 @@ import EquipmentTable from "./EquipmentTable";
 import SearchBox from "./common/SearchBox";
 import { db } from "../config/firebase";
 import { getDocs, collection } from "firebase/firestore";
+import "./css/Brand.css";
 
 const Brand = () => {
   const [brands, setBrands] = useState([]);

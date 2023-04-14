@@ -24,47 +24,42 @@ function NavBar() {
         Sign Up
       </Link>
     );
-    var welcomeMsg = "Welcome guest";
+    var welcomeMsg = "Guest";
   }
   return (
     <>
       <nav className="navbar navbar-expand-lg rounded mt-2">
-        <div className="container-fluid">
-          <Link to="/">
-            <p></p>
-          </Link>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  style={{ color: "white", fontWeight: "bold" }}
-                >
-                  {welcomeMsg}
-                </Link>
-              </li>
-              <li className="nav-item">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </li>
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="type" className="nav-link">
-                  Type
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="brand" className="nav-link">
-                  Brand
-                </Link>
-              </li>
-              <li className="nav-item">{signUpFlag}</li>
-              <li className="nav-item">{logFlag}</li>
-            </ul>
-          </div>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item message">
+              <Link
+                className="nav-link"
+                style={{ color: "white", fontWeight: "bold" }}
+              >
+                {welcomeMsg}
+              </Link>
+            </li>
+            {/* <li className="nav-item">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li> */}
+            <li className="nav-item ml-auto">
+              <Link to="/" className="nav-link home">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item ">
+              <Link to="type" className="nav-link type">
+                Type
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="brand" className="nav-link brand">
+                Brand
+              </Link>
+            </li>
+            <li className="nav-item signup">{signUpFlag}</li>
+            <li className="nav-item login">{logFlag}</li>
+          </ul>
         </div>
       </nav>
       <Outlet />

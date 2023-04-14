@@ -6,7 +6,7 @@ const EquipmentTable = ({ equipment, selected }) => {
       </h3>
     );
   return (
-    <table className="table rounded table-dark">
+    <table className="table rounded table-dark table-responsive">
       <thead>
         <tr>
           <th>Name</th>
