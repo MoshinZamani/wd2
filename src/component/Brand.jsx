@@ -81,7 +81,7 @@ const Brand = () => {
   return (
     <>
       <div className="row">
-        <div className="col-3 mt-3 sidebar">
+        <div className="mt-3 sidebar">
           <SideBar
             data={brands}
             selectedItem={selected}

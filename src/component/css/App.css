@@ -20,11 +20,12 @@
   display: grid !important;
   grid-template-columns: auto;
   grid-template-rows: 1fr auto;
-  justify-content: start;
+  justify-content: center;
 }
 
 .sidebar {
   border: 2px solid yellow;
+  width: 80% !important;
 }
 
 .list-group {
@@ -158,5 +159,8 @@
   }
   .grid-home {
     font-size: 15px !important;
+  }
+  .sidebar {
+    width: 25% !important;
   }
 }

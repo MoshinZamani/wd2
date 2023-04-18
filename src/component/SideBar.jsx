@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 function SideBar({ data, selectedItem, onItemSelect }) {
   return (
     <>
-      <ul className="list-group side-bar">
+      <ul className="list-group">
         {data.map((d) => (
           <li
             onClick={() => onItemSelect(d.name)}
