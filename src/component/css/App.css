@@ -1,5 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
 
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 2fr auto;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.navbar {
+  width: 100%;
+  border: 2px solid white;
+}
+
+.row {
+  border: 2px solid red;
+  display: grid !important;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr auto;
+  justify-content: start;
+}
+
+.sidebar {
+  border: 2px solid yellow;
+}
+
+.list-group {
+  display: grid !important;
+  justify-content: space-between;
+  grid-template-columns: 6rem 8rem 1fr 1fr 1fr 1fr;
+}
+.list-group-item {
+  border-radius: 0 !important;
+}
+
 .navbar-expand-lg .navbar-collapse {
   display: flex !important;
   flex-direction: row;
@@ -89,14 +123,6 @@
   color: #ffffff;
 }
 
-.list-group {
-  flex-direction: row !important;
-  font-size: 70%;
-}
-.list-group-item {
-  border-radius: 0 !important;
-}
-
 @media (min-width: 600px) {
   .list-group {
     flex-direction: row !important;
@@ -116,8 +142,13 @@
     color: white;
     margin-right: 4em;
   }
+  .row {
+    display: flex !important;
+  }
   .list-group {
-    flex-direction: column !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
   }
   .grid-home {
     font-size: 15px !important;

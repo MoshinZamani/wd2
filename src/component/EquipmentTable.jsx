@@ -29,7 +29,7 @@ const EquipmentTable = ({ equipment, selected }) => {
             <td>{e.name}</td>
             <td>
               <a href={e.link} target="_blank">
-                {e.link}
+                https://www.{e.brand}.com/{e.name}
               </a>
             </td>
           </tr>
