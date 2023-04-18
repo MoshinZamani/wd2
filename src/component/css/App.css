@@ -28,7 +28,7 @@
   display: grid !important;
   justify-content: center;
   grid-template-columns: 6rem 8rem 1fr 1fr;
-  font-size: 70%;
+  font-size: 100%;
 }
 .list-group-item {
   border-radius: 0 !important;
@@ -118,7 +118,7 @@
 }
 .thirdrow div a {
   color: antiquewhite;
-  font-size: 70%;
+  font-size: 100%;
   font-weight: 200;
   display: inline;
 }
@@ -130,7 +130,7 @@
 @media (min-width: 600px) {
   .list-group {
     flex-direction: row !important;
-    font-size: 70%;
+    font-size: 100%;
   }
   .grid-home {
     font-size: 12px !important;
@@ -145,7 +145,7 @@
     display: grid !important;
     justify-content: center;
     grid-template-columns: 6rem 8rem 1fr 1fr;
-    font-size: 70%;
+    font-size: 100%;
   }
   .message {
     color: white;
@@ -154,7 +154,7 @@
 }
 @media (min-width: 999px) {
   .container {
-    font-size: 18px;
+    font-size: 100%;
   }
   .message {
     color: white;

@@ -44,7 +44,7 @@ function NavBar() {
                 Home
               </Link>
             </li>
-            <li className="nav-item ">
+            <li className="nav-item">
               <Link to="type" className="nav-link type">
                 Type
               </Link>
