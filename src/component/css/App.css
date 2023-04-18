@@ -2,16 +2,17 @@
 
 .container {
   width: 100%;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 2fr auto;
-  justify-content: center;
+  display: grid !important;
+  grid-template-columns: auto !important;
+  grid-template-rows: 1fr auto !important;
+  justify-content: center !important;
   border: 2px solid black;
   font-size: 70%;
+  border: 5px solid green;
 }
 
 .navbar {
-  width: 100%;
+  width: 100% !important;
   border: 2px solid white;
 }
 
@@ -25,13 +26,13 @@
 
 .sidebar {
   border: 2px solid yellow;
-  width: 80% !important;
+  width: 100% !important;
 }
 
 .list-group {
   display: grid !important;
-  justify-content: space-between;
-  grid-template-columns: 6rem 8rem 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  grid-template-columns: 6rem 8rem 1fr 1fr;
   font-size: 70%;
 }
 .list-group-item {
@@ -63,6 +64,10 @@
 .navbar {
   background-color: rgba(23, 26, 26, 0.8) !important;
   width: 80%;
+}
+.message {
+  color: white;
+  margin-right: 4em;
 }
 
 .table {
@@ -135,13 +140,21 @@
   .grid-home {
     font-size: 12px !important;
   }
+  .message {
+    color: white;
+    margin-right: 4em;
+  }
 }
 @media (min-width: 768px) {
   .list-group {
     display: grid !important;
-    justify-content: space-between;
-    grid-template-columns: 6rem 8rem 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    grid-template-columns: 6rem 8rem 1fr 1fr;
     font-size: 70%;
+  }
+  .message {
+    color: white;
+    margin-right: 4em;
   }
 }
 @media (min-width: 999px) {

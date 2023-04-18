@@ -39,9 +39,6 @@ function NavBar() {
                 {welcomeMsg}
               </Link>
             </li>
-            {/* <li className="nav-item">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </li> */}
             <li className="nav-item ml-auto">
               <Link to="/" className="nav-link home">
                 Home
