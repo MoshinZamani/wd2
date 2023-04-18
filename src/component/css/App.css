@@ -29,6 +29,7 @@
   display: grid !important;
   justify-content: space-between;
   grid-template-columns: 6rem 8rem 1fr 1fr 1fr 1fr;
+  font-size: 70%;
 }
 .list-group-item {
   border-radius: 0 !important;
@@ -132,11 +133,14 @@
     font-size: 12px !important;
   }
 }
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .list-group {
-    flex-direction: row !important;
+    display: grid !important;
+    justify-content: space-between;
+    grid-template-columns: 6rem 8rem 1fr 1fr 1fr 1fr;
+    font-size: 70%;
   }
-} */
+}
 @media (min-width: 999px) {
   .message {
     color: white;
