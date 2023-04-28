@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Web Design 2 Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Climbing Gear Web Application
 
-## Available Scripts
+## Deployment Link
 
-In the project directory, you can run:
+use can access a live deployment of the app at [climbing](wd2-l3qh.vercel.app "climbing")
 
-### `npm start`
+## Prototype Link
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can see the prototype of the app at [prototype](https://www.figma.com/file/PlJI9BBm7ZniBhL7d5Jbhf/prototype?node-id=0-1&t=0Asji8TXYb0LTCQm-0 "prototype")
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of Content
 
-### `npm test`
+- [Problem and solution](##Problem-and-Solution)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [Challenges](##Challenges)
+* [Technologies](##Technologies)
+  - Frontend
+  - Backend
+* [Setup](##Setup)
+* [Future Development](##Future-Development)
 
-### `npm run build`
+## Problem and Solution
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+People with a passion of climbing have faced with the difficulty of choosing among various types of climbing gear manufactured by different manufacturers. After being a rock climber for some years and talking to and teaching many other climbers, I decided to create a web application to collect all the data a climber needs to choose among climbing gear. After interviewing some climbers and creating user personas, I created wireframes and finally the prototype. A link to the prototype is provided at the top of this README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Challenges
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+One of the toughest challenges I encountered while thinking about the content was that there are lots of manufacturers around the world with hundered of products which made it almost impossible to collect information manually so I created a small app to web scrape and insert data to my database.
 
-### `npm run eject`
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### React Library
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To create this app and other reusable components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Redux
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To create global state that is accessible in all components
 
-## Learn More
+### Firebase sercives
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To create the backend of the app inclding : databse, sign up and log in
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Nodejs
 
-### Code Splitting
+To create webscraping app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Setup
 
-### Analyzing the Bundle Size
+- Clone the Git repository
+- Run **_npm install_**
+- Run **_npm start_**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Development
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Since cimbers are usually travelling to places outside of cities with no internet connection, so it is very likely to turn it into a mobile app. Then climbers could be able to go online when possible and download the latest database available and use it offline in their adventures. Also there will be a comment section for each product in the DB so climbers would be able to share their experience of using that particular gear.
