@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
 
+.firstrow h2 {
+  width: 400px;
+  height: 100px;
+  color: white;
+}
+
 .container {
   width: 100%;
   display: grid !important;
@@ -48,9 +54,7 @@
 .signup {
   display: none;
 }
-.message {
-  margin-right: 2em;
-}
+
 .type,
 .brand,
 .login {
@@ -59,10 +63,6 @@
 .navbar {
   background-color: rgba(23, 26, 26, 0.8) !important;
   width: 80%;
-}
-.message {
-  color: white;
-  margin-right: 4em;
 }
 
 .table {
@@ -100,10 +100,10 @@
   font-style: italic;
 }
 
-.firstrow h2 {
+/* .firstrow h2 {
   font-weight: 900;
   width: 100%;
-}
+} */
 
 .secondrow a {
   font-weight: bolder;
@@ -128,6 +128,11 @@
 }
 
 @media (min-width: 600px) {
+  .firstrow h2 {
+    width: 500px;
+    height: 100px;
+    color: white;
+  }
   .list-group {
     flex-direction: row !important;
     font-size: 100%;
@@ -141,6 +146,11 @@
   }
 }
 @media (min-width: 768px) {
+  .firstrow h2 {
+    width: 500px;
+    height: 100px;
+    color: white;
+  }
   .list-group {
     display: grid !important;
     justify-content: center;
@@ -153,13 +163,12 @@
   }
 }
 @media (min-width: 999px) {
-  .container {
-    font-size: 100%;
-  }
-  .message {
+  .firstrow h2 {
+    width: 500px;
+    height: 100px;
     color: white;
-    margin-right: 4em;
   }
+
   .row {
     display: flex !important;
   }
@@ -167,9 +176,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-  }
-  .grid-home {
-    font-size: 15px !important;
   }
   .sidebar {
     width: 25% !important;
