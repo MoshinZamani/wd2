@@ -33,7 +33,7 @@ function NavBar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item message">
               <Link
-                className="nav-link"
+                className="nav-link welcomemsg"
                 style={{ color: "white", fontWeight: "bold" }}
               >
                 {welcomeMsg}

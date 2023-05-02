@@ -64,6 +64,9 @@
   background-color: rgba(23, 26, 26, 0.8) !important;
   width: 80%;
 }
+.welcomemsg {
+  margin-right: 4rem;
+}
 
 .table {
   background-color: rgba(23, 26, 26, 0.8) !important;
@@ -99,11 +102,6 @@
   margin-bottom: 30%;
   font-style: italic;
 }
-
-/* .firstrow h2 {
-  font-weight: 900;
-  width: 100%;
-} */
 
 .secondrow a {
   font-weight: bolder;
@@ -163,6 +161,9 @@
   }
 }
 @media (min-width: 999px) {
+  .container {
+    font-size: medium;
+  }
   .firstrow h2 {
     width: 500px;
     height: 100px;
