@@ -11,7 +11,11 @@ const EquipmentTable = ({ equipment, selected }) => {
           </thead>
         </table>
         <h3 className="nodata">
-          Nothing in the database for {selected}. Please check later.
+          Nothing in the database for <br />
+          <br />
+          <span className="selected">{selected}</span>
+          <br />
+          <br /> Please check later.
         </h3>
       </>
     );
