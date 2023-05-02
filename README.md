@@ -19,6 +19,7 @@ You can see the prototype of the app at [prototype](https://www.figma.com/file/P
 * [Technologies](##Technologies)
   - Frontend
   - Backend
+  - Accessibility
 * [Setup](##Setup)
 * [Future Development](##Future-Development)
 
@@ -51,6 +52,12 @@ To create the backend of the app inclding : databse, sign up and log in
 #### Nodejs
 
 To create webscraping app by using Cheerio and Axios library
+
+### Accessibility
+
+#### Everyone should be able to use the web equally
+
+In order to help people with accessibility this web application is using color contrast, link states. In addition I have used **_semantic HTML tags_**, **_role_** and **_aria_label_**.
 
 ## Setup
 
