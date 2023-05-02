@@ -78,7 +78,7 @@ function Home() {
               role="button"
               aria-pressed="true"
             >
-              Log In
+              &nbsp;&nbsp;&nbsp;&nbsp; Log In
             </Link>
           </div>
           <div>
@@ -98,70 +98,6 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* <div
-        className="row justify-content-center align-items-center"
-        style={{ height: "200px" }}
-      ></div>
-      <div className="row justify-content-center align-items-center">
-        <div className={messageClasses}>
-          <p style={{ color: "white" }}>{value}</p>
-        </div>
-      </div>
-      <div className="row justify-content-center align-items-center">
-        <div className="col-3">
-          <Link
-            to="type"
-            className="btn btn-lg btn-block mb-2 btn-home"
-            onMouseEnter={() => handleMouseEnter("type")}
-            onMouseLeave={handleMouseLeave}
-            role="button"
-            aria-pressed="true"
-          >
-            Type
-          </Link>
-        </div>
-        <div className="col-3">
-          <Link
-            to="brand"
-            style={{ backgroundImage: `url("../../logo/brands.jpg")` }}
-            className="btn btn-primary-background btn-lg btn-block mb-2 btn-home"
-            onMouseEnter={() => handleMouseEnter("brand")}
-            onMouseLeave={handleMouseLeave}
-            role="button"
-            aria-pressed="true"
-          >
-            Brand
-          </Link>
-        </div>
-      </div>
-      <div className="row justify-content-center align-items-center">
-        <div className="col-6">
-          <Link
-            to="login"
-            className="btn btn-secondary btn-lg active btn-block mb-2"
-            onMouseEnter={() => handleMouseEnter("login")}
-            onMouseLeave={handleMouseLeave}
-            role="button"
-            aria-pressed="true"
-          >
-            Log In
-          </Link>
-        </div>
-      </div>
-      <div className="row justify-content-center align-items-center">
-        <div className="col-6">
-          <Link
-            to="signup"
-            className="btn btn-danger btn-lg active btn-block"
-            onMouseEnter={() => handleMouseEnter("signup")}
-            onMouseLeave={handleMouseLeave}
-            role="button"
-            aria-pressed="true"
-          >
-            Sign Up
-          </Link>
-        </div>
-      </div> */}
     </>
   );
 }

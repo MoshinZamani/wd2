@@ -76,7 +76,9 @@ function Login() {
           error={errors.password}
         />
         <br />
-        <button className="btn btn-primary">Log in</button>
+        <button role="button" className="btn btn-primary">
+          Log in
+        </button>
       </form>
       <br />
     </>

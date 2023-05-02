@@ -92,7 +92,9 @@ function Signup() {
           <option value="more">more than three years</option>
         </select>
         <br />
-        <button className="btn btn-primary mt-2">Submit</button>
+        <button role="button" className="btn btn-primary mt-2">
+          Submit
+        </button>
       </form>
       <br />
     </>
