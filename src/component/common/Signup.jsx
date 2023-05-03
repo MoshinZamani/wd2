@@ -20,6 +20,7 @@ function Signup() {
   const schema = {
     fullName: Joi.string().min(2).label("Full name"),
     password: Joi.string().min(6).label("Password"),
+    pswConfirmation: Joi.string().min(6).label("Password"),
     email: Joi.string().email().required().label("Email"),
   };
 
@@ -83,6 +84,14 @@ function Signup() {
           value={inputs.password}
           onChange={handleChange}
           error={errors.password}
+        />
+        <br />
+        <Input
+          label="Password Confirmation"
+          name="pswConfirmation"
+          value={inputs.pswConfirmation}
+          onChange={handleChange}
+          error={errors.pswConfirmation}
         />
         <br />
         <label htmlFor="experience">Years of experience</label>

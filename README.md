@@ -1,6 +1,6 @@
 # Web Design 2 Project
 
-Climbing Gear Web Application
+Climbing Gear Web Application<br />
 This application has been created to fullfill the requirements of Web Design 2 module
 
 ## Deployment Link
