@@ -7,16 +7,22 @@ import SearchBox from "./common/SearchBox";
 import { db } from "../config/firebase";
 import { getDocs, collection } from "firebase/firestore";
 
+/*Shows all products divided by brand */
+
 const Brand = () => {
   const [brands, setBrands] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [equipment, setEquipment] = useState([]);
+  /**To set which barnd is selected */
   const [selected, setSelected] = useState("All Brands");
+  /**Search bar state */
   const [searchQuery, setSearchQuery] = useState();
 
+  /** Firebase refrences */
   const brandsCollectionRef = collection(db, "brands");
   const equipmentCollectionRef = collection(db, "equipment");
 
+  /**To load data from firebase db at the time of loading */
   const getBrandsList = async () => {
     try {
       const data = await getDocs(brandsCollectionRef);
@@ -45,7 +51,6 @@ const Brand = () => {
       console.error(err);
     }
   };
-
   useEffect(() => {
     getBrandsList();
     getEquipmentList();

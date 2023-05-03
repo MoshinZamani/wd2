@@ -4,9 +4,9 @@ import { auth } from "../config/firebase";
 
 function NavBar() {
   const login = useSelector((state) => state.log.value);
-
+  var logFlag;
   if (login) {
-    var logFlag = (
+    logFlag = (
       <Link to="logout" className="nav-link">
         Log Out
       </Link>
@@ -14,17 +14,17 @@ function NavBar() {
     var signUpFlag = "";
     var welcomeMsg = `Welcome ${auth.currentUser.email}`;
   } else {
-    var logFlag = (
+    logFlag = (
       <Link to="login" className="nav-link">
         Log In
       </Link>
     );
-    var signUpFlag = (
+    signUpFlag = (
       <Link to="signup" className="nav-link">
         Sign Up
       </Link>
     );
-    var welcomeMsg = "Guest";
+    welcomeMsg = "Guest";
   }
   return (
     <>
