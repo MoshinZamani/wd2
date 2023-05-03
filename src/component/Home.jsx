@@ -73,7 +73,9 @@ function Home() {
         </div>
         <div className="thirdrow">
           <div className="">
-            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </div>
             <Link
               to="login"
               className="login"
