@@ -5,7 +5,6 @@ import Type from "./component/Type";
 import Signup from "./component/common/Signup";
 import NavBar from "./component/NavBar";
 import Login from "./component/common/Login";
-import Help from "./component/Help";
 import Firebasedb from "./utils/Firebasedb";
 import Logout from "./component/common/Logout";
 import "./component/css/App.css";
@@ -23,7 +22,6 @@ function App() {
             <Route path="signup" element={<Signup />} />
             <Route path="login" element={<Login />} />
             <Route path="logout" element={<Logout />} />
-            <Route path="help" element={<Help />} />
           </Route>
           <Route path="home" element={<Home />} />
           <Route path="firebasedb" element={<Firebasedb />} />

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+/* Home page
+hovering on different links, shows different messages */
+
 function Home() {
   const [value, setValue] = useState("Learn Deeper Climb Higher");
   const [messageClasses, setMessageClasses] = useState("rounded col-12");

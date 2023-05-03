@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Outlet, Link } from "react-router-dom";
+
+/**Renders sidebar related to brand or type */
 
 function SideBar({ data, selectedItem, onItemSelect }) {
   return (
     <>
-      <ul role="sidebar" className="list-group">
+      <ul role="navigation" className="list-group">
         {data.map((d) => (
           <li
             onClick={() => onItemSelect(d.name)}

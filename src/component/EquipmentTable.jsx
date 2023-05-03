@@ -1,3 +1,5 @@
+/**All data is shown into this component as a table */
+
 const EquipmentTable = ({ equipment, selected }) => {
   if (equipment.length === 0)
     return (
@@ -32,7 +34,7 @@ const EquipmentTable = ({ equipment, selected }) => {
           <tr key={e.name}>
             <td>{e.name}</td>
             <td>
-              <a href={e.link} target="_blank">
+              <a href={e.link} target="_blank" rel="noreferrer">
                 https://www.{e.brand}.com/
               </a>
             </td>

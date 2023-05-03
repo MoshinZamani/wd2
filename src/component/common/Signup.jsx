@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import { useDispatch } from "react-redux";
 import Input from "./Input";
-import { OUT, IN } from "../../feature/log/logSlice";
+import { IN } from "../../feature/log/logSlice";
 import { useNavigate } from "react-router-dom";
 function Signup() {
   const [inputs, setInputs] = useState({
@@ -101,9 +101,7 @@ function Signup() {
           <option value="more">more than three years</option>
         </select>
         <br />
-        <button role="button" className="btn btn-primary mt-2">
-          Submit
-        </button>
+        <button className="btn btn-primary mt-2">Submit</button>
       </form>
       <br />
     </>
