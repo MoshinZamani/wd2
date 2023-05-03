@@ -6,7 +6,11 @@ const Input = ({ label, name, value, onChange, error }) => {
         <input
           id={name}
           name={name}
-          type={name === "password" ? "password" : "text"}
+          type={
+            name === "password" || name === "pswConfirmation"
+              ? "password"
+              : "text"
+          }
           className="form-control"
           value={value}
           onChange={onChange}
