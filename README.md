@@ -5,7 +5,7 @@ This application has been created to fullfill the requirements of Web Design 2 m
 
 ## Deployment Link
 
-I used Vercel in order to deploy this application. You can access a live deployment of the app at [climbing-gear.com](wd2-l3qh.vercel.app "climbing-gear.com") or [wd2-l3qh.vercel.app] (wd2-l3qh.vercel.app)
+I used Vercel in order to deploy this application. You can access a live deployment of the app at [climbing-gear.com](wd2-l3qh.vercel.app "climbing-gear.com") or [wd2-l3qh.vercel.app](wd2-l3qh.vercel.app)
 
 ## Prototype Link
 
