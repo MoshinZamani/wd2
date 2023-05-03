@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 /* Home page
 hovering on different links, shows different messages */
@@ -19,7 +20,7 @@ function Home() {
       },
       {
         tag: "login",
-        value: "Login to unlock climbing world",
+        value: "Unlock climbing world",
       },
     ];
     setValue(
@@ -72,10 +73,10 @@ function Home() {
           </div>
         </div>
         <div className="thirdrow">
+          <div>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp; </span>
+          </div>
           <div className="">
-            <div>
-              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            </div>
             <Link
               to="login"
               className="login"
