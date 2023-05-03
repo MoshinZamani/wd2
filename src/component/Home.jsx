@@ -19,7 +19,7 @@ function Home() {
       },
       {
         tag: "login",
-        value: "Unlock climbing world",
+        value: "Login to unlock climbing world",
       },
     ];
     setValue(
@@ -73,6 +73,7 @@ function Home() {
         </div>
         <div className="thirdrow">
           <div className="">
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <Link
               to="login"
               className="login"
@@ -81,7 +82,7 @@ function Home() {
               role="button"
               aria-pressed="true"
             >
-              &nbsp;&nbsp;&nbsp;&nbsp; Log In
+              Log In
             </Link>
           </div>
           <div>
